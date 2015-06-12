@@ -56,6 +56,6 @@ def compile(install):
         .everything()
         .under(workDir)
         .where_name_does_not_match('^%s/setup/.*$' % workDir)
-        .into('{BUILD_DIR}/htdocs')
+        .into('{BUILD_DIR}/htdocs/phpmyadmin')
         .done())
     return 0
