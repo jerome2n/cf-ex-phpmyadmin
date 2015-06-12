@@ -58,10 +58,11 @@ def compile(install):
         .where_name_does_not_match('^%s/setup/.*$' % workDir)
         .into('{BUILD_DIR}/htdocs/phpmyadmin')
         .done())
-	(install.builder
-		.move()
-		.everything()
-		.under('{BUILD_DIR}/myapp')
-		.into('{BUILD_DIR}/htdocs')
-		.done())
+    (install.builder
+        .move()
+        .everything()
+        .under('{BUILD_DIR}/myapp')
+        .into('{BUILD_DIR}/htdocs')
+        .done())
     return 0
+
