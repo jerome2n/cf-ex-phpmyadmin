@@ -21,6 +21,8 @@ This is an out-of-the-box implementation of PHPMyAdmin 4.2.2.  It's an example h
 
 1. Edit the manifest.yml file.  Change the 'host' attribute to something unique.  Then under "services:" change "mysql-db" to the name of your MySQL service.  This is the name of the service that will be bound to your application and thus available to PHPMyAdmin.
 
+1. Put the php files specific to your application inside the myapp folder
+
 1. Push it to CloudFoundry.
 
   ```bash
@@ -29,9 +31,13 @@ This is an out-of-the-box implementation of PHPMyAdmin 4.2.2.  It's an example h
 
   Access your application URL in the browser.  Login with the credentials for your service.  If you need to find these, just run this command and look for the VCAP_SERVICES environment variable under the `System Provided` section.
 
+
   ```bash
   cf env <app-name>
   ```
+1. Phpmyadmin will be available at: <base-url>/phpmyadmin
+
+1. Your app will be available at root url: <base-url> 
 
 ### How It Works
 
