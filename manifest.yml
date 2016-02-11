@@ -1,9 +1,9 @@
 ---
 applications:
-- name: phpmyadminvik
+- name: phpmyadmincorpus
   memory: 256M 
   instances: 1
-  host: phpmyadminvik
+  host: phpmyadmincorpus
   buildpack: https://github.com/cloudfoundry/php-buildpack#8c13f5434b2f31ca960d2bca9153df1978258535
   services:
-  -  wordpressvik-cleardb
+  -  my-test-mysql-db
